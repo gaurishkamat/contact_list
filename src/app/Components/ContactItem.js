@@ -10,10 +10,10 @@ export const ContactItem = (props) => {
         <Grid>
             <Grid.Row celled="true">
                 <Grid.Column width={4}>
-                    <Image  src='https://react.semantic-ui.com/images/avatar/large/matthew.png' size='small' />
+                    <Image  src='https://react.semantic-ui.com/images/avatar/large/elliot.jpg' size='small' />
                 </Grid.Column>
                 <Grid.Column width={10}>
-                    <Grid.Row>
+                    <Grid.Row className={'contact-name'}>
                         <h1>{firstname + ' ' + lastname}</h1>
                     </Grid.Row>
                     <Grid.Row>

@@ -1,3 +1,45 @@
 .ui.grid.contact-item{
     margin: 10px;
 }
+
+@background-color: #EDF5E1;
+
+@header-color: #379683;
+@font-color: #05386B;
+@margin: 15px;
+@font: 'arial';
+
+body{
+    background-color: @background-color;
+    margin: @margin;
+    font-family: 'Roboto';
+}
+
+.appheader{
+    background-color: @header-color;
+    margin: @margin 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    padding: 10px;
+}
+
+#app-title{
+    flex-grow: 2;
+}
+
+.contact-item{
+    border: 1px solid grey;
+}
+
+.contact-name{
+    color: @font-color;
+}
+
+// .icon{
+// }
+
+// .add-btn{ 
+//     color: red;
+// }

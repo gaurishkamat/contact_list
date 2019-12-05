@@ -9,7 +9,7 @@ const ModalPopup = (props) => {
     let btnSave = addOrUpdate == 'Add' ? 'Add' : 'Update';
 return(
 <Modal 
-    trigger={<Icon onClick={handleOpen} name="user plus" size="huge"/>}
+    trigger={<Icon onClick={handleOpen} className={'add-btn'} name="user plus" size="large" circular/>}
     open={modalOpen}
     onClose={handleClose}
     size='tiny'>

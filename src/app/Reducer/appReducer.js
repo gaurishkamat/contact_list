@@ -21,13 +21,6 @@ const defaultState = {
         email: 'gaurishkamat23@gmail.com',
         contact: '9922339855',
         status: 'Active'
-    },{
-        id: uuid(),
-        firstname: 'Savan',
-        lastname: 'Kumar',
-        email: 'savansharma22@gmail.com',
-        contact: '9023209889',
-        status: 'Inactive'
     }]
 }
 

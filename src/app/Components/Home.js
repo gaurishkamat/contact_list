@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {connect} from 'react-redux';
-import {Button, Modal, Form,Image, Header, Input, Grid, Dropdown, Icon} from 'semantic-ui-react';
+import {Message} from 'semantic-ui-react';
 import 'semantic-ui-css/semantic.min.css';
 import { ContactItem } from './ContactItem';
 import ModalPopup from './ModalPopup';
@@ -104,18 +104,28 @@ class Home extends React.Component{
         }]
         return(
             <div>
-                <ModalPopup
-                    handleOpen = {this.handleOpen}
-                    handleClose = {this.handleClose}
-                    saveListener = {this.saveListener}
-                    onInputChange = {this.onInputChange}
-                    modalOpen = {this.props.modalOpen}
-                    addOrUpdate = {this.props.addOrUpdate}
-                    selectedContact = {this.props.selectedContact}
-                />
-                {contacts.map((item, index) => {
-                    return (<ContactItem item={item} key={index} onDeleteUser={this.onDeleteUser} onUpdateUser={this.onUpdateUser}/>)
-                })}
+                <div className='appheader'>
+                    <h1 id="app-title">Contact List</h1>
+                    <ModalPopup
+                        handleOpen = {this.handleOpen}
+                        handleClose = {this.handleClose}
+                        saveListener = {this.saveListener}
+                        onInputChange = {this.onInputChange}
+                        modalOpen = {this.props.modalOpen}
+                        addOrUpdate = {this.props.addOrUpdate}
+                        selectedContact = {this.props.selectedContact}
+                    />
+                </div>
+                {contacts.length ? 
+                    contacts.map((item, index) => {
+                        return (<ContactItem className='contact-item' item={item} key={index} onDeleteUser={this.onDeleteUser} onUpdateUser={this.onUpdateUser}/>)
+                    }) : 
+                <Message>
+                    <Message.Header>No Contacts</Message.Header>
+                    <p>
+                    Please add contacts to display.
+                    </p>
+              </Message>}
             </div>
         )
     }
