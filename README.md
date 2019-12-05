@@ -1,4 +1,24 @@
 # contact_list
+
+
+├──  src                      # Source code
+│    ├── app                  
+│    ├── Components           # UI Components
+│    │   ├── ContactItem.js             
+│    │   ├── Home.js
+│    │   └──   ModalPopup.js   
+│    └── Reducer              # Data reducer
+│        └── appReducer.js            
+├── .babelrc                 
+├──  index.html
+├──  package-lock.json
+├──  package.json
+├──  styles.less
+└──  webpack.config.js        # Configuration file
+└──  README.md
+
+
+
 Clone the project repository and follow the commands below to get the project working:
  
 1. cd contact_list 
