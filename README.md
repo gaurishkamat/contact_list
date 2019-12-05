@@ -2,7 +2,7 @@
 
 
 ├──  src                      # Source code
-│    ├── app                  
+│    ├── app                 
 │    ├── Components           # UI Components
 │    │   ├── ContactItem.js             
 │    │   ├── Home.js
