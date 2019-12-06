@@ -38,23 +38,19 @@ class Home extends React.Component{
         }));
 
         
-        this.props.actionHandler({type: 'MODAL_CLOSE'})
-        this.props.actionHandler({type: 'CLEAR_SELECTED_DATA', value: {}})
-        // console.log('Clicked')
+        this.props.actionHandler({type: 'MODAL_CLOSE'});
+        this.props.actionHandler({type: 'CLEAR_SELECTED_DATA', value: {}});
     }
 
     onDeleteUser(event, item){
-        event.persist()
-        // console.log('Hello', item.id)
+        event.persist();
         this.props.actionHandler(this.actionCreator('DELETE_CONTACT', item.id));
     }
 
     onUpdateUser(event, item){
-        event.persist()
-        // console.log('Hello', item.id)
-        
-        this.props.actionHandler({type: 'UPDATE_SELECTED_DATA', value: {id: item.id}})
-        this.props.actionHandler({type: 'MODAL_OPEN', value: {addOrUpdate: 'Update', item: item}})
+        event.persist();
+        this.props.actionHandler({type: 'UPDATE_SELECTED_DATA', value: {id: item.id}});
+        this.props.actionHandler({type: 'MODAL_OPEN', value: {addOrUpdate: 'Update', item: item}});
         this.props.actionHandler(this.actionCreator('UPDATE_CONTACT', item.id));
     }
     
@@ -70,11 +66,12 @@ class Home extends React.Component{
     }
     
     handleOpen(){
-        this.props.actionHandler({type: 'MODAL_OPEN', value: {addOrUpdate: 'Add'}})
+        this.props.actionHandler({type: 'MODAL_OPEN', value: {addOrUpdate: 'Add'}});
     }
 
     handleClose(){
-        this.props.actionHandler({type: 'MODAL_CLOSE'})
+        this.props.actionHandler({type: 'MODAL_CLOSE'});
+        this.props.actionHandler({type: 'CLEAR_SELECTED_DATA', value: {}});
     }
 
     onDropdownClick(event){
@@ -85,7 +82,7 @@ class Home extends React.Component{
 
     onInputChange(event, data){
         console.log(event.target.name, event.target.value);
-        this.props.actionHandler({type: 'UPDATE_SELECTED_DATA', value: {name: event.target.name, val: event.target.value}})
+        this.props.actionHandler({type: 'UPDATE_SELECTED_DATA', value: {name: event.target.name, val: event.target.value}});
     }
 
     render(){
